@@ -84,7 +84,7 @@ class PageMap extends Page{
             .then(data => {
                 var addressLatLng = [latitude, longitude];  
                 let address = data.display_name;
-                var marker = L.marker(addressLatLng).addTo(map);
+                var marker = L.marker(addressLatLng).addTo(instance.map);
                 marker.bindPopup(address).openPopup();
 
             })
